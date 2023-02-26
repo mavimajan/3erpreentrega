@@ -1,0 +1,131 @@
+/* INDEX */
+/* header-footer */
+@media only screen and (max-width: 768px){
+    footer {
+        display: grid;
+        grid-template-columns: 15% 85%;
+        column-gap: 1px;
+        & .logo{
+            width: 100px;
+            height: 100px;
+            & .imgLogo{
+                width: 90px;
+                padding: 0px 3px 0px 3px;
+                margin-top: 4px;
+                margin-bottom: 2px;
+            }
+        }
+    }
+    main{
+        & .sectionProductos{
+            & h1{
+                margin-top: 5px;
+            }
+            & .productos{
+                & ul{
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    .preguntasFrecuentes{
+        & .infoPreguntas{
+            & .cambios{
+                padding-left: 15px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px){
+    footer{
+        grid-template-columns: 30% 70%;
+        column-gap: 0px;
+    }
+    main{
+        & .carouselImg #demo{
+            width: 90%;
+            height: 250px;
+            & .carousel-item img{
+                width: 90%;
+                height: 250px;
+            }
+        }
+        & .informacion{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            align-items: center;
+            justify-items: center;
+        }
+        & .destacados{
+            & .imgDestacados{
+                display:grid;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas:
+                "img1 img2"
+                "img3 img4";
+                row-gap: 3px;
+                justify-items: center;
+                & .dest1{
+                    grid-area: img1;
+                }
+                & .dest2{
+                    grid-area: img2;
+                }
+                & .dest3{
+                    grid-area: img3;
+                }
+                & .dest4{
+                    grid-area: img4;
+                }
+            }
+        }
+    }
+    .nosotras{
+        & .divNosotras{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & img{
+                padding-top: 5px;
+            }
+            & p{
+                padding-left: 7px;
+                padding-right: 2px;
+            }
+        }
+    }
+    .prendas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .prendasConjuntos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .infoProducto1, .infoProducto2, .infoProducto3, .infoProducto4{
+        & p{
+            padding-top: 5px;
+        }
+    }
+    .seleccionUno, .seleccionDos, .seleccionTres, .seleccionCuatro{
+        & .talle{
+            padding-right: 10px;
+        }
+        & .color{
+            padding-left: 5px;
+        }
+    }
+    .preguntasFrecuentes{
+        & .infoPreguntas{
+            & .comprar{
+                padding-left: 15px;
+            }
+        }
+    }
+}

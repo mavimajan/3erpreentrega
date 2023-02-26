@@ -1,0 +1,68 @@
+body{
+    font-family:'Código M PLUS 1', sans-serif;
+}
+header{
+    background-image: linear-gradient(to bottom,rgb(24, 241, 248), rgb(159, 252, 255));
+    & .nav-link{
+        color: grey !important;
+        font-weight: bold;
+    }
+    & .nav-link:hover{
+        background-color: #E4F2F0;
+    }
+    & .collapse{
+        & a{
+            color: grey;
+            font-weight: bold;
+        }
+    }
+}
+
+footer{
+    background-image: linear-gradient(to bottom, rgb(24, 241, 248), rgb(159, 252, 255));
+    display: grid;
+    grid-template-columns: 15% 85%;
+    & .logo{
+        width: 120px;
+        height: 120px;
+        & .imgLogo{
+            width: 90px;
+            margin-top: 12px;
+            margin-left: 12px;
+        } 
+    }
+    & .footer{
+        display:grid;
+        align-items: center;
+        & ul{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            & li:hover{
+                background-color: white;
+            }
+            & li{
+                display: inline-block;
+                & a{
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: grey;
+                } 
+            }
+        }
+    }
+}
+
+$botones:(
+    gris: grey,
+    negro:black,
+    agua: #18f1f8 
+);
+@each $colores, $color in $botones{
+    .btn--#{$colores} {
+        border: $color solid 1px;
+        color: white;
+        background-color: darkgrey ;
+    }
+}

@@ -1,0 +1,125 @@
+.productoBodys, .productoConjuntos, .productoBombachas{
+    text-align: center;
+    font-weight: bold;
+    background-color:rgb(159, 252, 255);
+    color: grey;
+    margin-top: 10px;
+}
+.prendas{
+    display: grid;
+    grid-template-columns: 25% 10% 65%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 2px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "img1 infoProducto1 seleccionUno"
+    "img2 infoProducto2 seleccionDos"
+    "img3 infoProducto3 seleccionTres"
+    "img4 infoProducto4 seleccionCuatro";
+    margin-top: 4px;
+    & .img1, .img1b{ 
+        grid-area: img1;
+    } 
+    & .img2, .img2b{ 
+        grid-area: img2;
+    }
+    & .img3, .img3b{ 
+        grid-area: img3;
+    }
+    & .img4, .img4b{ 
+        grid-area: img4;
+    }
+    & .img1, .img2,  .img3, .img4{
+        justify-self: center;
+        width: 150px;
+        height: 200px
+    }
+    & .img1b, .img2b, .img3b, .img4b{
+        justify-self: center;
+        width: 150px;
+        height: 200px;
+    }
+}
+.prendasConjuntos{
+    display: grid;
+    grid-template-columns: 25% 10% 65%;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "img1c infoProducto1 seleccionUno"
+    "img2c infoProducto2 seleccionDos"
+    "img3c infoProducto3 seleccionTres";
+    margin-top: 4px;
+    & .img1c{
+        grid-area: img1c;
+    }
+    & .img2c{
+        grid-area: img2c;
+    }
+    & .img3c{
+        grid-area: img3c;
+    }
+    & .img1c, .img2c, .img3c{
+        justify-self: center;
+        width: 150px;
+        height: 200px;
+    }
+}
+.infoProducto1{
+    grid-area: infoProducto1;
+}
+.infoProducto2{
+    grid-area: infoProducto2;
+}
+.infoProducto3{
+    grid-area: infoProducto3;
+}
+.infoProducto4{
+    grid-area: infoProducto4;
+}
+.infoProducto1, .infoProducto2, .infoProducto3, .infoProducto4{
+    & p{
+        text-align: center;
+        font-size: small;
+        padding-top: 60%;
+    }
+}
+.seleccionUno{ 
+    grid-area: seleccionUno;
+} 
+.seleccionDos{ 
+    grid-area: seleccionDos; 
+} 
+.seleccionTres{ 
+    grid-area: seleccionTres; 
+}
+.seleccionCuatro{ 
+    grid-area: seleccionCuatro; 
+}
+.seleccionUno, .seleccionDos, .seleccionTres, .seleccionCuatro{
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    padding: 10px;
+}
+.tabla{
+    & h3{
+        text-align: center;
+        background-color: grey;
+        color:rgb(159, 252, 255);
+        font-weight: bold;
+        margin-top: 15px;
+    }
+    & div{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        & table{
+            width: 300px;
+            height: 200px;
+        }
+    }
+}
