@@ -26,7 +26,12 @@ function registro_de_datos(){
     localStorage.setItem("datos_usuarios_registrados", JSON.stringify(datos_usuarios_registrados));
 }
 
-// por cada vez que yo ingrese un nuevo registro, me guarde datos de usuario registrado, el nuevo registro.
+// por cada vez que ingrese se registre un nuevo usuario, se guarden datos en datos_usuarios_registrados.
+
+for (let nuevo_registro_usuario of datos_usuarios_registrados){
+    nuevo_registro_usuario= datos_usuarios_registrados.push(nuevo_registro_usuario);
+    localStorage.setItem("datos_nuevo_usuario_registrado", JSON.stringify(datos_usuarios_registrados));
+}
 
 
 
